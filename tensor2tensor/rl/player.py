@@ -243,6 +243,7 @@ class PlayerEnv(gym.Env):
         fill=(255, 0, 0)
     )
     header = np.asarray(img)
+    header = header.copy()
     del img
     header.setflags(write=1)
     # Top row color indicates if WAIT MODE is on.
